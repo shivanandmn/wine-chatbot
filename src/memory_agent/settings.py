@@ -211,7 +211,7 @@ ENV_VALUE_TO_FILE_MAP: dict[str, str] = {
 
 def get_settings() -> Settings:
     logging.info(f"get_settings() - Looking for {ENV_VAR_NAME} in environment...")
-    env = os.getenv(ENV_VAR_NAME)
+    env = os.getenv(ENV_VAR_NAME, "dev")
     if env is not None:
         logging.info(f"get_settings() - Got {ENV_VAR_NAME}={env} from environment")
     else:
