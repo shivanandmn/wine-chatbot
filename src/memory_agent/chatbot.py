@@ -5,11 +5,9 @@ from memory_agent.prompts import SYSTEM_PROMPT
 from langgraph.managed import IsLastStep, RemainingSteps
 from typing import List, TypedDict
 from langchain_core.messages import BaseMessage
-from memory_agent.settings import get_settings
-import os
+import streamlit as st
 import logging
-from dotenv import load_dotenv
-load_dotenv()
+from config import config
 
 class AgentStateWithWines(TypedDict):
     messages: List[BaseMessage]
@@ -17,13 +15,10 @@ class AgentStateWithWines(TypedDict):
     is_last_step: IsLastStep
     remaining_steps: RemainingSteps
 
-# Initialize settings
-settings = get_settings()
-
-# Get API key from environment
-api_key = os.getenv("GEMINI_API_KEY")
+# Get API key from Streamlit secrets
+api_key = config.get('ai', 'gemini_api_key')
 if not api_key:
-    raise ValueError(f"GEMINI_API_KEY environment variable is required - {api_key}")
+    raise ValueError("Gemini API key not found in configuration")
 
 logging.info("Initializing chat model...")
 tools = [wine_search, sort_wines]

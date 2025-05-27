@@ -8,7 +8,7 @@ python-dotenv
 streamlit
 us
 pydantic-settings
-pydotenv
+python-dotenv
 pycountry
 pydantic[email]
 slugify 

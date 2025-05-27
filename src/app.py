@@ -1,6 +1,11 @@
 import streamlit as st
 from memory_agent.chatbot import agent
 from langchain_core.messages import HumanMessage, AIMessage
+from config import get_streamlit_config
+
+# Apply Streamlit configurations
+config = get_streamlit_config()
+st.set_page_config(**config)
 
 def init_session_state():
     if "messages" not in st.session_state:
