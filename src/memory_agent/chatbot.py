@@ -7,7 +7,7 @@ from typing import List, TypedDict
 from langchain_core.messages import BaseMessage
 import streamlit as st
 import logging
-from config import config
+import os
 
 class AgentStateWithWines(TypedDict):
     messages: List[BaseMessage]
@@ -16,7 +16,7 @@ class AgentStateWithWines(TypedDict):
     remaining_steps: RemainingSteps
 
 # Get API key from Streamlit secrets
-api_key = config.get('ai', 'gemini_api_key')
+api_key = os.getenv("GEMINI_API_KEY")
 if not api_key:
     raise ValueError("Gemini API key not found in configuration")
 
