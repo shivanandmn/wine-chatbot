@@ -234,9 +234,33 @@ def get_settings() -> Settings:
         logging.info(f"get_settings() - Found local override file: {local_env}")
         env_files.append(local_env)
     
+    # Default configuration for development/demo environment
+    default_config = {
+        "env_name": "dev",
+        "home_page": "http://localhost:8501",
+        "jwt_secret": "dev-secret-key",
+        "google_oauth_client_secret": "",
+        "google_callback": "http://localhost:8501/callback",
+        "mail_password": "",
+        "postgres_host": "localhost",
+        "postgres_password": "",
+        "db_connection_string": "sqlite:///demo.db",  # Use SQLite for demo
+        "event_publishing_enabled": "False",
+        "image_search_backend_host": "http://localhost:8009",
+        "mapbox_api_key": ""
+    }
+
     if not env_files:
-        logging.warning("No environment files found. Using environment variables only.")
-        return Settings()
+        logging.warning("No environment files found. Using default development configuration.")
+        return Settings(**default_config)
     
     logging.info(f"get_settings() - Using env files: {env_files}")
-    return Settings(_env_file=env_files)  # type: ignore
+    # Load from env files but fall back to defaults for missing values
+    settings = Settings(_env_file=env_files)
+    
+    # Update any missing required fields with defaults
+    for key, value in default_config.items():
+        if not getattr(settings, key, None):
+            setattr(settings, key, value)
+    
+    return settings
