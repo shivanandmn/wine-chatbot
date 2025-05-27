@@ -8,6 +8,8 @@ from langchain_core.messages import BaseMessage
 from memory_agent.settings import get_settings
 import os
 import logging
+from dotenv import load_dotenv
+load_dotenv()
 
 class AgentStateWithWines(TypedDict):
     messages: List[BaseMessage]
@@ -21,7 +23,7 @@ settings = get_settings()
 # Get API key from environment
 api_key = os.getenv("GEMINI_API_KEY")
 if not api_key:
-    raise ValueError("GEMINI_API_KEY environment variable is required")
+    raise ValueError(f"GEMINI_API_KEY environment variable is required - {api_key}")
 
 logging.info("Initializing chat model...")
 tools = [wine_search, sort_wines]
