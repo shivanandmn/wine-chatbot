@@ -18,7 +18,12 @@ class AgentStateWithWines(TypedDict):
 
 
 tools = [wine_search, sort_wines]
-model = init_chat_model(model="gemini-2.0-flash-lite", model_provider="google_genai", api_key=settings.gemini_api_key).bind_tools(tools)
+model = init_chat_model(
+    model="gemini-2.0-flash-lite",
+    model_provider="google_genai",
+    api_key=settings.gemini_api_key,
+    credentials=None  # Explicitly set to None to force API key auth
+).bind_tools(tools)
 
 agent = create_react_agent(model, tools, prompt=SYSTEM_PROMPT)
 
