@@ -11,3 +11,4 @@ pydantic-settings
 pydotenv
 pycountry
 pydantic[email]
+slugify 
