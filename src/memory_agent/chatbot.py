@@ -7,7 +7,6 @@ from typing import List, TypedDict
 from langchain_core.messages import BaseMessage
 from memory_agent.settings import get_settings
 import os
-settings = get_settings()
 class AgentStateWithWines(TypedDict):
     messages: List[BaseMessage]
     wines: list[dict] | None

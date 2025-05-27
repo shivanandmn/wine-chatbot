@@ -214,26 +214,6 @@ def get_settings() -> Settings:
     env = os.getenv(ENV_VAR_NAME, "dev")
     logging.info(f"get_settings() - Using environment: {env}")
 
-    env_files = []
-    
-    # Try to find .env file
-    dotenv_path = dotenv.find_dotenv(usecwd=True)
-    if dotenv_path:
-        logging.info(f"get_settings() - Found .env file at {dotenv_path}")
-        env_files.append(dotenv_path)
-    
-    # Try to find environment-specific file
-    env_file = ENV_VALUE_TO_FILE_MAP.get(env)
-    if env_file and os.path.exists(env_file):
-        logging.info(f"get_settings() - Found environment file: {env_file}")
-        env_files.append(env_file)
-    
-    # Try to find .env.local file
-    local_env = ".env.local"
-    if os.path.exists(local_env):
-        logging.info(f"get_settings() - Found local override file: {local_env}")
-        env_files.append(local_env)
-    
     # Default configuration for development/demo environment
     default_config = {
         "env_name": "dev",
@@ -250,17 +230,52 @@ def get_settings() -> Settings:
         "mapbox_api_key": ""
     }
 
-    if not env_files:
-        logging.warning("No environment files found. Using default development configuration.")
+    # Try to find .env file
+    dotenv_path = dotenv.find_dotenv(usecwd=True)
+    if not dotenv_path:
+        logging.warning("No .env file found. Using default development configuration.")
         return Settings(**default_config)
+
+    # Read and parse the .env file
+    config = {}
+    current_section = None
     
-    logging.info(f"get_settings() - Using env files: {env_files}")
-    # Load from env files but fall back to defaults for missing values
-    settings = Settings(_env_file=env_files)
-    
-    # Update any missing required fields with defaults
-    for key, value in default_config.items():
-        if not getattr(settings, key, None):
-            setattr(settings, key, value)
-    
-    return settings
+    with open(dotenv_path, 'r') as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith('#'):
+                continue
+                
+            if line.startswith('[') and line.endswith(']'):
+                current_section = line[1:-1]
+                continue
+                
+            if '=' in line:
+                key, value = [x.strip() for x in line.split('=', 1)]
+                # Remove quotes if present
+                value = value.strip('"')
+                
+                # Flatten the key with section prefix if in a section
+                if current_section:
+                    key = f"{current_section}_{key}"
+                
+                config[key.lower()] = value
+
+    # Merge with defaults
+    merged_config = default_config.copy()
+    merged_config.update({
+        "google_oauth_client_secret": config.get('google_oauth_client_secret', ''),
+        "google_callback": config.get('google_callback', default_config['google_callback']),
+        "mail_password": config.get('mail_password', ''),
+        "postgres_host": config.get('postgres_host', default_config['postgres_host']),
+        "postgres_password": config.get('postgres_password', ''),
+        "db_connection_string": config.get('mongodb_connection_string', default_config['db_connection_string']),
+        "env_name": config.get('app_env_name', default_config['env_name']),
+        "home_page": config.get('app_home_page', default_config['home_page']),
+        "event_publishing_enabled": config.get('app_event_publishing_enabled', default_config['event_publishing_enabled']),
+        "image_search_backend_host": config.get('ai_image_search_backend_host', default_config['image_search_backend_host']),
+        "jwt_secret": config.get('app_jwt_secret', default_config['jwt_secret']),
+        "mapbox_api_key": config.get('app_mapbox_api_key', default_config['mapbox_api_key'])
+    })
+
+    return Settings(**merged_config)
