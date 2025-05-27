@@ -9,11 +9,6 @@ class Config:
         self._config = {}
         self._load_config()
 
-class Config:
-    def __init__(self):
-        self._config = {}
-        self._load_config()
-
     def _load_config(self) -> None:
         # Load all sections from Streamlit secrets
         self._config = dict(st.secrets)
@@ -31,6 +26,25 @@ class Config:
             'layout': st.secrets.get('streamlit', {}).get('layout', 'centered'),
             'initial_sidebar_state': st.secrets.get('streamlit', {}).get('initial_sidebar_state', 'auto'),
         }
+
+    def debug_secrets(self) -> dict:
+        """Debug function to check the status of secrets loading.
+        Returns a dictionary with debug information about secrets."""
+        debug_info = {
+            'secrets_loaded': hasattr(st, 'secrets'),
+            'available_sections': list(st.secrets.keys()) if hasattr(st, 'secrets') else [],
+            'missing_sections': [],
+            'empty_sections': []
+        }
+        
+        required_sections = ['postgres', 'google', 'mail', 'openai', 'app', 'mongodb', 'ai']
+        for section in required_sections:
+            if section not in self._config:
+                debug_info['missing_sections'].append(section)
+            elif not self._config[section]:
+                debug_info['empty_sections'].append(section)
+        
+        return debug_info
 
     def get(self, section: str, key: str = None) -> Any:
         """Get a configuration value."""
@@ -68,3 +82,22 @@ TEMPERATURE = float(os.getenv('TEMPERATURE', '0.7'))
 def get_streamlit_config():
     """Get all Streamlit-related configurations."""
     return STREAMLIT_CONFIG
+
+
+# Get debug information about secrets
+debug_info = config.debug_secrets()
+
+# Print the debug information in a readable format
+print("\n=== Secrets Debug Information ===")
+print(f"Secrets loaded: {debug_info['secrets_loaded']}")
+print("\nAvailable sections:")
+for section in debug_info['available_sections']:
+    print(f"- {section}")
+
+print("\nMissing required sections:")
+for section in debug_info['missing_sections']:
+    print(f"- {section}")
+
+print("\nEmpty sections (need configuration):")
+for section in debug_info['empty_sections']:
+    print(f"- {section}")

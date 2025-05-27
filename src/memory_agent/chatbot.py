@@ -17,7 +17,6 @@ class AgentStateWithWines(TypedDict):
 
 # Get API key from Streamlit secrets
 api_key = config.get('ai', 'gemini_api_key')
-api_key = api_key.get("gemini_api_key") if api_key is None else api_key
 if not api_key:
     raise ValueError("Gemini API key not found in configuration")
 
