@@ -168,7 +168,7 @@ class Settings(BaseSettings):
     smartsomm_ai_api_key: str = "ai_api_key"
     smartsomm_ai_model: str = "gemini-2.5-flash-preview-04-17"
     smartsomm_router_prompt_path: str | None = None
-    gemini_api_key: str = "gemini_api_key"
+    gemini_api_key: str | None = None
     openai_max_retry: int = 5
     chat_history_database: str = "private_dataset"
     chat_history_table: str = "chat_history"
