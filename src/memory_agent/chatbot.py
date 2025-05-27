@@ -5,7 +5,9 @@ from memory_agent.prompts import SYSTEM_PROMPT
 from langgraph.managed import IsLastStep, RemainingSteps
 from typing import List, TypedDict
 from langchain_core.messages import BaseMessage
+from memory_agent.settings import get_settings
 
+settings = get_settings()
 class AgentStateWithWines(TypedDict):
     messages: List[BaseMessage]
     wines: list[dict] | None
@@ -16,7 +18,7 @@ class AgentStateWithWines(TypedDict):
 
 
 tools = [wine_search, sort_wines]
-model = init_chat_model(model="gemini-2.0-flash-lite", model_provider="google_genai").bind_tools(tools)
+model = init_chat_model(model="gemini-2.0-flash-lite", model_provider="google_genai", api_key=settings.gemini_api_key).bind_tools(tools)
 
 agent = create_react_agent(model, tools, prompt=SYSTEM_PROMPT)
 
