@@ -20,12 +20,13 @@ model = init_chat_model(model="gemini-2.0-flash-lite", model_provider="google_ge
 
 agent = create_react_agent(model, tools, prompt=SYSTEM_PROMPT)
 
-messages = []
-while True:
-    user_input = input("User: ")
-    messages.append({"role": "user", "content": user_input})
-    response = agent.invoke({"messages": messages})
-    messages.append(response["messages"][-1])
-    print("*" * 50)
-    print("Assistant:", response["messages"][-1].content)
-    print("*" * 50)
+if __name__ == "__main__":
+    messages = []
+    while True:
+        user_input = input("User: ")
+        messages.append({"role": "user", "content": user_input})
+        response = agent.invoke({"messages": messages})
+        messages.append(response["messages"][-1])
+        print("*" * 50)
+        print("Assistant:", response["messages"][-1].content)
+        print("*" * 50)

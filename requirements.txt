@@ -1,3 +1,4 @@
+-e .
 langchain-core
 langgraph
 langchain-community
@@ -9,3 +10,4 @@ us
 pydantic-settings
 pydotenv
 pycountry
+pydanticpydantic[email]
