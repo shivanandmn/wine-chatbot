@@ -10,4 +10,4 @@ us
 pydantic-settings
 pydotenv
 pycountry
-pydanticpydantic[email]
+pydantic[email]
