@@ -1,0 +1,11 @@
+langchain-core
+langgraph
+langchain-community
+langchain-openai
+langchain-google-genai
+python-dotenv
+streamlit
+us
+pydantic-settings
+pydotenv
+pycountry
