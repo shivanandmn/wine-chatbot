@@ -212,17 +212,31 @@ ENV_VALUE_TO_FILE_MAP: dict[str, str] = {
 def get_settings() -> Settings:
     logging.info(f"get_settings() - Looking for {ENV_VAR_NAME} in environment...")
     env = os.getenv(ENV_VAR_NAME, "dev")
-    if env is not None:
-        logging.info(f"get_settings() - Got {ENV_VAR_NAME}={env} from environment")
-    else:
-        logging.info(f"get_settings() - Looking for {ENV_VAR_NAME} in .env file...")
-        env = dotenv.get_key(dotenv_path=dotenv.find_dotenv(), key_to_get=ENV_VAR_NAME)
-        if env is not None:
-            logging.info(f"get_settings() - Got {ENV_VAR_NAME}={env} from .env file")
-    if env is None:
-        raise ValueError(f"get_settings() - Cannot find {ENV_VAR_NAME} variable in environment or .env file")
+    logging.info(f"get_settings() - Using environment: {env}")
 
-    env_file = ENV_VALUE_TO_FILE_MAP[env]
-    logging.info(f"get_settings() - Using {env_file=}")
-    # files will be loaded in order, with each file overriding the previous one
-    return Settings(_env_file=[".env", env_file, ".env.local"])  # type: ignore
+    env_files = []
+    
+    # Try to find .env file
+    dotenv_path = dotenv.find_dotenv(usecwd=True)
+    if dotenv_path:
+        logging.info(f"get_settings() - Found .env file at {dotenv_path}")
+        env_files.append(dotenv_path)
+    
+    # Try to find environment-specific file
+    env_file = ENV_VALUE_TO_FILE_MAP.get(env)
+    if env_file and os.path.exists(env_file):
+        logging.info(f"get_settings() - Found environment file: {env_file}")
+        env_files.append(env_file)
+    
+    # Try to find .env.local file
+    local_env = ".env.local"
+    if os.path.exists(local_env):
+        logging.info(f"get_settings() - Found local override file: {local_env}")
+        env_files.append(local_env)
+    
+    if not env_files:
+        logging.warning("No environment files found. Using environment variables only.")
+        return Settings()
+    
+    logging.info(f"get_settings() - Using env files: {env_files}")
+    return Settings(_env_file=env_files)  # type: ignore
