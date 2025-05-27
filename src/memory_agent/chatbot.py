@@ -6,7 +6,7 @@ from langgraph.managed import IsLastStep, RemainingSteps
 from typing import List, TypedDict
 from langchain_core.messages import BaseMessage
 from memory_agent.settings import get_settings
-
+import os
 settings = get_settings()
 class AgentStateWithWines(TypedDict):
     messages: List[BaseMessage]
@@ -16,12 +16,12 @@ class AgentStateWithWines(TypedDict):
 
 
 
-print("Credentials :", settings.gemini_api_key)
+print("Credentials :", os.getenv("GEMINI_API_KEY"))
 tools = [wine_search, sort_wines]
 model = init_chat_model(
     model="gemini-2.0-flash-lite",
     model_provider="google_genai",
-    api_key=settings.gemini_api_key,
+    api_key=os.getenv("GEMINI_API_KEY"),
     credentials=None  # Explicitly set to None to force API key auth
 ).bind_tools(tools)
 
