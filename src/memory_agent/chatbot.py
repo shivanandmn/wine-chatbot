@@ -16,7 +16,7 @@ class AgentStateWithWines(TypedDict):
 
 
 
-
+print("Credentials :", settings.gemini_api_key)
 tools = [wine_search, sort_wines]
 model = init_chat_model(
     model="gemini-2.0-flash-lite",
