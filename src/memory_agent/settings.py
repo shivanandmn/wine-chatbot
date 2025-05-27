@@ -232,50 +232,36 @@ def get_settings() -> Settings:
 
     # Try to find .env file
     dotenv_path = dotenv.find_dotenv(usecwd=True)
-    if not dotenv_path:
+    if dotenv_path:
+        logging.info(f"Found .env file at {dotenv_path}")
+        # Load environment variables from .env file
+        dotenv.load_dotenv(dotenv_path)
+    else:
         logging.warning("No .env file found. Using default development configuration.")
-        return Settings(**default_config)
 
-    # Read and parse the .env file
-    config = {}
-    current_section = None
-    
-    with open(dotenv_path, 'r') as f:
-        for line in f:
-            line = line.strip()
-            if not line or line.startswith('#'):
-                continue
-                
-            if line.startswith('[') and line.endswith(']'):
-                current_section = line[1:-1]
-                continue
-                
-            if '=' in line:
-                key, value = [x.strip() for x in line.split('=', 1)]
-                # Remove quotes if present
-                value = value.strip('"')
-                
-                # Flatten the key with section prefix if in a section
-                if current_section:
-                    key = f"{current_section}_{key}"
-                
-                config[key.lower()] = value
+    # Check for GEMINI_API_KEY in environment
+    gemini_api_key = os.getenv("GEMINI_API_KEY")
+    if gemini_api_key:
+        os.environ["GEMINI_API_KEY"] = gemini_api_key
+        logging.info("Found GEMINI_API_KEY in environment")
+    else:
+        logging.warning("GEMINI_API_KEY not found in environment")
 
-    # Merge with defaults
+    # Merge configuration from environment variables
     merged_config = default_config.copy()
     merged_config.update({
-        "google_oauth_client_secret": config.get('google_oauth_client_secret', ''),
-        "google_callback": config.get('google_callback', default_config['google_callback']),
-        "mail_password": config.get('mail_password', ''),
-        "postgres_host": config.get('postgres_host', default_config['postgres_host']),
-        "postgres_password": config.get('postgres_password', ''),
-        "db_connection_string": config.get('mongodb_connection_string', default_config['db_connection_string']),
-        "env_name": config.get('app_env_name', default_config['env_name']),
-        "home_page": config.get('app_home_page', default_config['home_page']),
-        "event_publishing_enabled": config.get('app_event_publishing_enabled', default_config['event_publishing_enabled']),
-        "image_search_backend_host": config.get('ai_image_search_backend_host', default_config['image_search_backend_host']),
-        "jwt_secret": config.get('app_jwt_secret', default_config['jwt_secret']),
-        "mapbox_api_key": config.get('app_mapbox_api_key', default_config['mapbox_api_key'])
+        "google_oauth_client_secret": os.getenv("GOOGLE_OAUTH_CLIENT_SECRET", ""),
+        "google_callback": os.getenv("GOOGLE_CALLBACK", default_config["google_callback"]),
+        "mail_password": os.getenv("MAIL_PASSWORD", ""),
+        "postgres_host": os.getenv("POSTGRES_HOST", default_config["postgres_host"]),
+        "postgres_password": os.getenv("POSTGRES_PASSWORD", ""),
+        "db_connection_string": os.getenv("DB_CONNECTION_STRING", default_config["db_connection_string"]),
+        "env_name": os.getenv("ENV_NAME", default_config["env_name"]),
+        "home_page": os.getenv("HOME_PAGE", default_config["home_page"]),
+        "event_publishing_enabled": os.getenv("EVENT_PUBLISHING_ENABLED", default_config["event_publishing_enabled"]),
+        "image_search_backend_host": os.getenv("IMAGE_SEARCH_BACKEND_HOST", default_config["image_search_backend_host"]),
+        "jwt_secret": os.getenv("JWT_SECRET", default_config["jwt_secret"]),
+        "mapbox_api_key": os.getenv("MAPBOX_API_KEY", default_config["mapbox_api_key"])
     })
 
     return Settings(**merged_config)

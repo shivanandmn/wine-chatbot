@@ -7,22 +7,36 @@ from typing import List, TypedDict
 from langchain_core.messages import BaseMessage
 from memory_agent.settings import get_settings
 import os
+import logging
+
 class AgentStateWithWines(TypedDict):
     messages: List[BaseMessage]
     wines: list[dict] | None
     is_last_step: IsLastStep
     remaining_steps: RemainingSteps
 
+# Initialize settings
+settings = get_settings()
 
+# Get API key from environment
+api_key = os.getenv("GEMINI_API_KEY")
+if not api_key:
+    raise ValueError("GEMINI_API_KEY environment variable is required")
 
-print("Credentials :", os.getenv("GEMINI_API_KEY"))
+logging.info("Initializing chat model...")
 tools = [wine_search, sort_wines]
-model = init_chat_model(
-    model="gemini-2.0-flash-lite",
-    model_provider="google_genai",
-    api_key=os.getenv("GEMINI_API_KEY"),
-    credentials=None  # Explicitly set to None to force API key auth
-).bind_tools(tools)
+
+try:
+    model = init_chat_model(
+        model="gemini-2.0-flash-lite",
+        model_provider="google_genai",
+        api_key=api_key,
+        credentials=None  # Explicitly set to None to force API key auth
+    ).bind_tools(tools)
+    logging.info("Chat model initialized successfully")
+except Exception as e:
+    logging.error(f"Failed to initialize chat model: {str(e)}")
+    raise
 
 agent = create_react_agent(model, tools, prompt=SYSTEM_PROMPT)
 
