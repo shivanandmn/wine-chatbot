@@ -254,6 +254,31 @@ class AgentStateWithWines(TypedDict):
     is_last_step: IsLastStep
     remaining_steps: RemainingSteps
 
+def process_wine_data(wine_data):
+    """
+    Process wine data to extract specific columns.
+    
+    Args:
+        wine_data (list): List of wine dictionaries from the JSON data
+        
+    Returns:
+        list: List of dictionaries with selected columns
+    """
+    processed_data = []
+    
+    for item in wine_data:
+        if item["data_type"] == "vintage":
+            wine = item["data"]
+            processed_wine = {
+                "title": wine["title"],
+                "user_rating": wine["user_rating"],
+                "region": wine["region"],
+                "price": wine["shopping_prices"][0]["price_amount"] if wine["shopping_prices"] else None
+            }
+            processed_data.append(processed_wine)
+    
+    return processed_data
+
 
 @tool("wine_search")
 def wine_search(
@@ -399,7 +424,7 @@ def wine_search(
         data.removed_filters = Filters()
     print("Get wine data from Vinovoss search API.")
     response = query_ai_service(data=data)
-    return response
+    return process_wine_data(response)
 
 
 @tool("sort_wines")

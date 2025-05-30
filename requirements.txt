@@ -12,3 +12,6 @@ python-dotenv
 pycountry
 pydantic[email]
 slugify 
+
+##
+jinja2

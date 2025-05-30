@@ -1,0 +1,754 @@
+[
+    {
+        "data": {
+            "id": "921087077",
+            "slug": "the-prisoner-red-blend-0",
+            "vintage_year": 0,
+            "title": "The Prisoner Red Blend",
+            "image": "https://vinovoss.com/images/bottles/943db021d1334738a951518a6875a034.webp",
+            "user_rating": 4.3,
+            "user_rating_count": 3218,
+            "labels": [],
+            "region_id": "438113020",
+            "region_slug": "california-united-states",
+            "region": "California",
+            "country": "United States",
+            "price": null,
+            "bottle_volume": null,
+            "link_to_shop": null,
+            "shopping_prices": [
+                {
+                    "variant_id": "variant_01JRTEPHE0D25BYJ92Q6F5SVF8",
+                    "price_amount": 49.99,
+                    "vintage_id": "921087077",
+                    "wine_id": 613834,
+                    "vendor_id": "store_01JRANHYFE5SD1JDBDA3E3XX6P",
+                    "vendor_name": "Merchant X"
+                }
+            ],
+            "discriminator": "CompactVintage",
+            "wine_slug": "the-prisoner-red-blend",
+            "images": {
+                "bottle": "https://vinovoss.com/images/bottles/943db021d1334738a951518a6875a034.webp",
+                "bottle_mobile": "https://vinovoss.com/images/bottles/943db021d1334738a951518a6875a034_mobile.webp"
+            },
+            "is_natural": false
+        },
+        "data_type": "vintage"
+    },
+    {
+        "data": {
+            "id": "5e628093",
+            "slug": "zenato-amarone-della-valpolicella-classico-2018",
+            "vintage_year": 2018,
+            "title": "Zenato Amarone della Valpolicella Classico",
+            "image": "https://vinovoss.com/images/bottles/530301ca947c4ce3a61324405df1e500.webp",
+            "user_rating": 4.4,
+            "user_rating_count": 963,
+            "labels": [],
+            "region_id": "8c8113210",
+            "region_slug": "veneto-italy",
+            "region": "Veneto",
+            "country": "Italy",
+            "price": null,
+            "bottle_volume": null,
+            "link_to_shop": null,
+            "shopping_prices": [
+                {
+                    "variant_id": "variant_01JS1SA51ZEN8GZ14D95VDQJYK",
+                    "price_amount": 72.99,
+                    "vintage_id": "5e628093",
+                    "wine_id": 614704,
+                    "vendor_id": "store_01JRANHYFE5SD1JDBDA3E3XX6P",
+                    "vendor_name": "Merchant X"
+                }
+            ],
+            "discriminator": "CompactVintage",
+            "wine_slug": "zenato-amarone-della-valpolicella-classico",
+            "images": {
+                "bottle": "https://vinovoss.com/images/bottles/530301ca947c4ce3a61324405df1e500.webp",
+                "bottle_mobile": "https://vinovoss.com/images/bottles/530301ca947c4ce3a61324405df1e500_mobile.webp"
+            },
+            "is_natural": false
+        },
+        "data_type": "vintage"
+    },
+    {
+        "data": {
+            "id": "5f1250575",
+            "slug": "san-marzano-60-sessantanni-old-vines-primitivo-di-manduria-2018",
+            "vintage_year": 2018,
+            "title": "San Marzano 60 Sessantanni Old Vines Primitivo di Manduria",
+            "image": "https://vinovoss.com/images/bottles/bece7fb664d84ebf9a1f8fdef071adf3.webp",
+            "user_rating": 4.3,
+            "user_rating_count": 1059,
+            "labels": [],
+            "region_id": "5f8113561",
+            "region_slug": "puglia-italy",
+            "region": "Puglia",
+            "country": "Italy",
+            "price": null,
+            "bottle_volume": null,
+            "link_to_shop": null,
+            "shopping_prices": [
+                {
+                    "variant_id": "variant_01JS1SHRK955CPSNKF60HD8WET",
+                    "price_amount": 39.99,
+                    "vintage_id": "5f1250575",
+                    "wine_id": 614639,
+                    "vendor_id": "store_01JRANHYFE5SD1JDBDA3E3XX6P",
+                    "vendor_name": "Merchant X"
+                }
+            ],
+            "discriminator": "CompactVintage",
+            "wine_slug": "san-marzano-60-sessantanni-old-vines-primitivo-di-manduria",
+            "images": {
+                "bottle": "https://vinovoss.com/images/bottles/bece7fb664d84ebf9a1f8fdef071adf3.webp",
+                "bottle_mobile": "https://vinovoss.com/images/bottles/bece7fb664d84ebf9a1f8fdef071adf3_mobile.webp"
+            },
+            "is_natural": false
+        },
+        "data_type": "vintage"
+    },
+    {
+        "data": {
+            "id": "398153508",
+            "slug": "gaja-barbaresco-2020",
+            "vintage_year": 2020,
+            "title": "Gaja Barbaresco",
+            "image": "https://vinovoss.com/images/bottles/38ce5b5eee724887a2f68b065306f391.webp",
+            "user_rating": 4.4,
+            "user_rating_count": 554,
+            "labels": [
+                "Award Winning"
+            ],
+            "region_id": "888113227",
+            "region_slug": "piemonte-italy",
+            "region": "Piemonte",
+            "country": "Italy",
+            "price": null,
+            "bottle_volume": null,
+            "link_to_shop": null,
+            "shopping_prices": [
+                {
+                    "variant_id": "variant_01JS1S8RN9GNARJVFFAJ2J6V6G",
+                    "price_amount": 339.99,
+                    "vintage_id": "398153508",
+                    "wine_id": 616509,
+                    "vendor_id": "store_01JRANHYFE5SD1JDBDA3E3XX6P",
+                    "vendor_name": "Merchant X"
+                }
+            ],
+            "discriminator": "CompactVintage",
+            "wine_slug": "gaja-barbaresco",
+            "images": {
+                "bottle": "https://vinovoss.com/images/bottles/38ce5b5eee724887a2f68b065306f391.webp",
+                "bottle_mobile": "https://vinovoss.com/images/bottles/38ce5b5eee724887a2f68b065306f391_mobile.webp"
+            },
+            "is_natural": false
+        },
+        "data_type": "vintage"
+    },
+    {
+        "data": {
+            "id": "511434331",
+            "slug": "chateau-angelus-saint-emilion-grand-cru-premier-grand-cru-classe-2014",
+            "vintage_year": 2014,
+            "title": "Ch\u00e2teau Angelus Saint-\u00c9milion Grand Cru (Premier Grand Cru Class\u00e9)",
+            "image": "https://vinovoss.com/images/bottles/a3866c5bd68b4eb28bec3e9b35bac723.webp",
+            "user_rating": 4.6,
+            "user_rating_count": 316,
+            "labels": [],
+            "region_id": "d28113178",
+            "region_slug": "bordeaux-france",
+            "region": "Bordeaux",
+            "country": "France",
+            "price": null,
+            "bottle_volume": null,
+            "link_to_shop": null,
+            "shopping_prices": [
+                {
+                    "variant_id": "variant_01JS1SKFZ3V0TQ3C71FH5MCCG8",
+                    "price_amount": 489.99,
+                    "vintage_id": "511434331",
+                    "wine_id": 614380,
+                    "vendor_id": "store_01JRANHYFE5SD1JDBDA3E3XX6P",
+                    "vendor_name": "Merchant X"
+                }
+            ],
+            "discriminator": "CompactVintage",
+            "wine_slug": "chateau-angelus-saint-emilion-grand-cru-premier-grand-cru-classe",
+            "images": {
+                "bottle": "https://vinovoss.com/images/bottles/a3866c5bd68b4eb28bec3e9b35bac723.webp",
+                "bottle_mobile": "https://vinovoss.com/images/bottles/a3866c5bd68b4eb28bec3e9b35bac723_mobile.webp"
+            },
+            "is_natural": false
+        },
+        "data_type": "vintage"
+    },
+    {
+        "data": {
+            "id": "6d628044",
+            "slug": "zenato-ripassa-valpolicella-ripasso-superiore-2020",
+            "vintage_year": 2020,
+            "title": "Zenato Ripassa Valpolicella Ripasso Superiore",
+            "image": "https://vinovoss.com/images/bottles/54128d853a154dfea5e291e90c2f5d8b.webp",
+            "user_rating": 4.1,
+            "user_rating_count": 1568,
+            "labels": [],
+            "region_id": "1a8113209",
+            "region_slug": "veneto-italy",
+            "region": "Veneto",
+            "country": "Italy",
+            "price": null,
+            "bottle_volume": null,
+            "link_to_shop": null,
+            "shopping_prices": [
+                {
+                    "variant_id": "variant_01JRTGBD4EMG53H14GJG5XKNVG",
+                    "price_amount": 38.99,
+                    "vintage_id": "6d628044",
+                    "wine_id": 631985,
+                    "vendor_id": "store_01JRANHYFE5SD1JDBDA3E3XX6P",
+                    "vendor_name": "Merchant X"
+                }
+            ],
+            "discriminator": "CompactVintage",
+            "wine_slug": "zenato-ripassa-valpolicella-ripasso-superiore",
+            "images": {
+                "bottle": "https://vinovoss.com/images/bottles/54128d853a154dfea5e291e90c2f5d8b.webp",
+                "bottle_mobile": "https://vinovoss.com/images/bottles/54128d853a154dfea5e291e90c2f5d8b_mobile.webp"
+            },
+            "is_natural": false
+        },
+        "data_type": "vintage"
+    },
+    {
+        "data": {
+            "id": "532084813",
+            "slug": "caymus-cabernet-sauvignon-2016",
+            "vintage_year": 2016,
+            "title": "Caymus Cabernet Sauvignon",
+            "image": "https://vinovoss.com/images/bottles/94585d2f0b3c48bf8dd88fd8fed56968.webp",
+            "user_rating": 4.5,
+            "user_rating_count": 3196,
+            "labels": [],
+            "region_id": "818113023",
+            "region_slug": "napa-united-states",
+            "region": "Napa",
+            "country": "United States",
+            "price": null,
+            "bottle_volume": null,
+            "link_to_shop": null,
+            "shopping_prices": [
+                {
+                    "variant_id": "variant_01JS1RWW1KNPZH859H1AR5G2TZ",
+                    "price_amount": 349.99,
+                    "vintage_id": "532084813",
+                    "wine_id": 616519,
+                    "vendor_id": "store_01JRANHYFE5SD1JDBDA3E3XX6P",
+                    "vendor_name": "Merchant X"
+                }
+            ],
+            "discriminator": "CompactVintage",
+            "wine_slug": "caymus-cabernet-sauvignon",
+            "images": {
+                "bottle": "https://vinovoss.com/images/bottles/94585d2f0b3c48bf8dd88fd8fed56968.webp",
+                "bottle_mobile": "https://vinovoss.com/images/bottles/94585d2f0b3c48bf8dd88fd8fed56968_mobile.webp"
+            },
+            "is_natural": false
+        },
+        "data_type": "vintage"
+    },
+    {
+        "data": {
+            "id": "682386055",
+            "slug": "opus-one-opus-one-2021",
+            "vintage_year": 2021,
+            "title": "Opus One Opus One",
+            "image": "https://vinovoss.com/images/bottles/f5f0292122864f68bba2a376d35f6880.webp",
+            "user_rating": 4.6,
+            "user_rating_count": 1645,
+            "labels": [
+                "Award Winning"
+            ],
+            "region_id": "818113023",
+            "region_slug": "napa-united-states",
+            "region": "Napa",
+            "country": "United States",
+            "price": null,
+            "bottle_volume": null,
+            "link_to_shop": null,
+            "shopping_prices": [
+                {
+                    "variant_id": "variant_01JRAVXB2SWC5T2S03FDAWYE9C",
+                    "price_amount": 194.99,
+                    "vintage_id": "682386055",
+                    "wine_id": 605792,
+                    "vendor_id": "store_01JRANHYFE5SD1JDBDA3E3XX6P",
+                    "vendor_name": "Merchant X"
+                }
+            ],
+            "discriminator": "CompactVintage",
+            "wine_slug": "opus-one-opus-one",
+            "images": {
+                "bottle": "https://vinovoss.com/images/bottles/f5f0292122864f68bba2a376d35f6880.webp",
+                "bottle_mobile": "https://vinovoss.com/images/bottles/f5f0292122864f68bba2a376d35f6880_mobile.webp"
+            },
+            "is_natural": false
+        },
+        "data_type": "vintage"
+    },
+    {
+        "data": {
+            "id": "922106115",
+            "slug": "penfolds-grange-2009",
+            "vintage_year": 2009,
+            "title": "Penfolds Grange",
+            "image": "https://vinovoss.com/images/bottles/5fc4627655e042babde4578fd41b7adf.webp",
+            "user_rating": 4.6,
+            "user_rating_count": 1014,
+            "labels": [
+                "Award Winning"
+            ],
+            "region_id": "d48113032",
+            "region_slug": "south-australia-australia",
+            "region": "South Australia",
+            "country": "Australia",
+            "price": null,
+            "bottle_volume": null,
+            "link_to_shop": null,
+            "shopping_prices": [
+                {
+                    "variant_id": "variant_01JS1S2A92FARMPR0WRJN4AFJC",
+                    "price_amount": 649.99,
+                    "vintage_id": "922106115",
+                    "wine_id": 622223,
+                    "vendor_id": "store_01JRANHYFE5SD1JDBDA3E3XX6P",
+                    "vendor_name": "Merchant X"
+                }
+            ],
+            "discriminator": "CompactVintage",
+            "wine_slug": "penfolds-grange",
+            "images": {
+                "bottle": "https://vinovoss.com/images/bottles/5fc4627655e042babde4578fd41b7adf.webp",
+                "bottle_mobile": "https://vinovoss.com/images/bottles/5fc4627655e042babde4578fd41b7adf_mobile.webp"
+            },
+            "is_natural": false
+        },
+        "data_type": "vintage"
+    },
+    {
+        "data": {
+            "id": "df836633",
+            "slug": "vega-sicilia-unico-2013",
+            "vintage_year": 2013,
+            "title": "Vega Sicilia Unico",
+            "image": "https://vinovoss.com/images/bottles/c67ed2dc50194e9e93ee67b30ece0157.webp",
+            "user_rating": 4.7,
+            "user_rating_count": 697,
+            "labels": [
+                "Award Winning"
+            ],
+            "region_id": "a38113168",
+            "region_slug": "castilla-y-leon-spain",
+            "region": "Castilla y Le\u00f3n",
+            "country": "Spain",
+            "price": null,
+            "bottle_volume": null,
+            "link_to_shop": null,
+            "shopping_prices": [
+                {
+                    "variant_id": "variant_01JS1S7ED5H8MH92P7VX5Q06EW",
+                    "price_amount": 725.99,
+                    "vintage_id": "df836633",
+                    "wine_id": 616985,
+                    "vendor_id": "store_01JRANHYFE5SD1JDBDA3E3XX6P",
+                    "vendor_name": "Merchant X"
+                }
+            ],
+            "discriminator": "CompactVintage",
+            "wine_slug": "vega-sicilia-unico",
+            "images": {
+                "bottle": "https://vinovoss.com/images/bottles/c67ed2dc50194e9e93ee67b30ece0157.webp",
+                "bottle_mobile": "https://vinovoss.com/images/bottles/c67ed2dc50194e9e93ee67b30ece0157_mobile.webp"
+            },
+            "is_natural": false
+        },
+        "data_type": "vintage"
+    },
+    {
+        "data": {
+            "id": "af2177524",
+            "slug": "chateau-margaux-chateau-margaux-premier-grand-cru-classe-2009",
+            "vintage_year": 2009,
+            "title": "Ch\u00e2teau Margaux Ch\u00e2teau Margaux (Premier Grand Cru Class\u00e9)",
+            "image": "https://vinovoss.com/images/bottles/417810aaf6664922ab708c05a3cc3f93.webp",
+            "user_rating": 4.6,
+            "user_rating_count": 991,
+            "labels": [],
+            "region_id": "ab8113706",
+            "region_slug": "bordeaux-france",
+            "region": "Bordeaux",
+            "country": "France",
+            "price": null,
+            "bottle_volume": null,
+            "link_to_shop": null,
+            "shopping_prices": [
+                {
+                    "variant_id": "variant_01JRTJYBKV2AH8AYAWF9ZPHRNQ",
+                    "price_amount": 1471.99,
+                    "vintage_id": "af2177524",
+                    "wine_id": 621357,
+                    "vendor_id": "store_01JRANHYFE5SD1JDBDA3E3XX6P",
+                    "vendor_name": "Merchant X"
+                }
+            ],
+            "discriminator": "CompactVintage",
+            "wine_slug": "chateau-margaux-chateau-margaux-premier-grand-cru-classe",
+            "images": {
+                "bottle": "https://vinovoss.com/images/bottles/417810aaf6664922ab708c05a3cc3f93.webp",
+                "bottle_mobile": "https://vinovoss.com/images/bottles/417810aaf6664922ab708c05a3cc3f93_mobile.webp"
+            },
+            "is_natural": false
+        },
+        "data_type": "vintage"
+    },
+    {
+        "data": {
+            "id": "633076974",
+            "slug": "chateau-latour-grand-vin-pauillac-premier-grand-cru-classe-1995",
+            "vintage_year": 1995,
+            "title": "Ch\u00e2teau Latour Grand Vin Pauillac (Premier Grand Cru Class\u00e9)",
+            "image": "https://vinovoss.com/images/bottles/780d0275861849f7bffa9fbc7395f48e.webp",
+            "user_rating": 4.6,
+            "user_rating_count": 819,
+            "labels": [],
+            "region_id": "b98113166",
+            "region_slug": "bordeaux-france",
+            "region": "Bordeaux",
+            "country": "France",
+            "price": null,
+            "bottle_volume": null,
+            "link_to_shop": null,
+            "shopping_prices": [
+                {
+                    "variant_id": "variant_01JS1SDERHB4XDYE94S9GNZ4F6",
+                    "price_amount": 999.99,
+                    "vintage_id": "633076974",
+                    "wine_id": 637080,
+                    "vendor_id": "store_01JRANHYFE5SD1JDBDA3E3XX6P",
+                    "vendor_name": "Merchant X"
+                }
+            ],
+            "discriminator": "CompactVintage",
+            "wine_slug": "chateau-latour-grand-vin-pauillac-premier-grand-cru-classe",
+            "images": {
+                "bottle": "https://vinovoss.com/images/bottles/780d0275861849f7bffa9fbc7395f48e.webp",
+                "bottle_mobile": "https://vinovoss.com/images/bottles/780d0275861849f7bffa9fbc7395f48e_mobile.webp"
+            },
+            "is_natural": false
+        },
+        "data_type": "vintage"
+    },
+    {
+        "data": {
+            "id": "d4517034",
+            "slug": "stag-s-leap-wine-cellars-artemis-cabernet-sauvignon-2021",
+            "vintage_year": 2021,
+            "title": "Stag's Leap Wine Cellars ARTEMIS Cabernet Sauvignon",
+            "image": "https://vinovoss.com/images/bottles/faa18ee8ef67477282321837d2b53954.webp",
+            "user_rating": 4.3,
+            "user_rating_count": 2208,
+            "labels": [],
+            "region_id": "818113023",
+            "region_slug": "napa-united-states",
+            "region": "Napa",
+            "country": "United States",
+            "price": null,
+            "bottle_volume": null,
+            "link_to_shop": null,
+            "shopping_prices": [
+                {
+                    "variant_id": "variant_01JRAV3SEFAQ23ASRBVDGRMMZX",
+                    "price_amount": 89.99,
+                    "vintage_id": "d4517034",
+                    "wine_id": 620508,
+                    "vendor_id": "store_01JRANHYFE5SD1JDBDA3E3XX6P",
+                    "vendor_name": "Merchant X"
+                }
+            ],
+            "discriminator": "CompactVintage",
+            "wine_slug": "stag-s-leap-wine-cellars-artemis-cabernet-sauvignon",
+            "images": {
+                "bottle": "https://vinovoss.com/images/bottles/faa18ee8ef67477282321837d2b53954.webp",
+                "bottle_mobile": "https://vinovoss.com/images/bottles/faa18ee8ef67477282321837d2b53954_mobile.webp"
+            },
+            "is_natural": false
+        },
+        "data_type": "vintage"
+    },
+    {
+        "data": {
+            "id": "112433528",
+            "slug": "chateau-haut-brion-pessac-leognan-premier-grand-cru-classe-1989",
+            "vintage_year": 1989,
+            "title": "Ch\u00e2teau Haut-Brion Pessac-L\u00e9ognan (Premier Grand Cru Class\u00e9)",
+            "image": "https://vinovoss.com/images/bottles/0d577708c7724211a69a6bde0002dc50.webp",
+            "user_rating": 4.6,
+            "user_rating_count": 764,
+            "labels": [],
+            "region_id": "728113505",
+            "region_slug": "bordeaux-france",
+            "region": "Bordeaux",
+            "country": "France",
+            "price": null,
+            "bottle_volume": null,
+            "link_to_shop": null,
+            "shopping_prices": [
+                {
+                    "variant_id": "variant_01JTR2BWJGB0G8BW109NMMF5J9",
+                    "price_amount": 3744.99,
+                    "vintage_id": "112433528",
+                    "wine_id": 623445,
+                    "vendor_id": "store_01JRANHYFE5SD1JDBDA3E3XX6P",
+                    "vendor_name": "Merchant X"
+                }
+            ],
+            "discriminator": "CompactVintage",
+            "wine_slug": "chateau-haut-brion-pessac-leognan-premier-grand-cru-classe",
+            "images": {
+                "bottle": "https://vinovoss.com/images/bottles/0d577708c7724211a69a6bde0002dc50.webp",
+                "bottle_mobile": "https://vinovoss.com/images/bottles/0d577708c7724211a69a6bde0002dc50_mobile.webp"
+            },
+            "is_natural": false
+        },
+        "data_type": "vintage"
+    },
+    {
+        "data": {
+            "id": "f7763094",
+            "slug": "chateau-musar-rouge-gaston-hochar-2017",
+            "vintage_year": 2017,
+            "title": "Ch\u00e2teau Musar Rouge (Gaston Hochar)",
+            "image": "https://vinovoss.com/images/bottles/66b19ef787664e0fa640fb040b32db70.webp",
+            "user_rating": 4.2,
+            "user_rating_count": 2870,
+            "labels": [],
+            "region_id": "7e8115037",
+            "region_slug": "bekaa-valley-lebanon",
+            "region": "Bekaa Valley",
+            "country": "Lebanon",
+            "price": null,
+            "bottle_volume": null,
+            "link_to_shop": null,
+            "shopping_prices": [
+                {
+                    "variant_id": "variant_01JTR1W7Z8CACNEJZR2DN9D4HS",
+                    "price_amount": 99.99,
+                    "vintage_id": "f7763094",
+                    "wine_id": 616790,
+                    "vendor_id": "store_01JRANHYFE5SD1JDBDA3E3XX6P",
+                    "vendor_name": "Merchant X"
+                }
+            ],
+            "discriminator": "CompactVintage",
+            "wine_slug": "chateau-musar-rouge-gaston-hochar",
+            "images": {
+                "bottle": "https://vinovoss.com/images/bottles/66b19ef787664e0fa640fb040b32db70.webp",
+                "bottle_mobile": "https://vinovoss.com/images/bottles/66b19ef787664e0fa640fb040b32db70_mobile.webp"
+            },
+            "is_natural": false
+        },
+        "data_type": "vintage"
+    },
+    {
+        "data": {
+            "id": "f31896391",
+            "slug": "chateau-cheval-blanc-saint-emilion-grand-cru-premier-grand-cru-classe-2018",
+            "vintage_year": 2018,
+            "title": "Ch\u00e2teau Cheval Blanc Saint-\u00c9milion Grand Cru (Premier Grand Cru Class\u00e9)",
+            "image": "https://vinovoss.com/images/bottles/a5ee6da87e1248d0975fe7e9cd3c060f.webp",
+            "user_rating": 4.6,
+            "user_rating_count": 505,
+            "labels": [],
+            "region_id": "d28113178",
+            "region_slug": "bordeaux-france",
+            "region": "Bordeaux",
+            "country": "France",
+            "price": null,
+            "bottle_volume": null,
+            "link_to_shop": null,
+            "shopping_prices": [
+                {
+                    "variant_id": "variant_01JS1SM47M6VMTDD15SYQ527HZ",
+                    "price_amount": 1095.99,
+                    "vintage_id": "f31896391",
+                    "wine_id": 623141,
+                    "vendor_id": "store_01JRANHYFE5SD1JDBDA3E3XX6P",
+                    "vendor_name": "Merchant X"
+                }
+            ],
+            "discriminator": "CompactVintage",
+            "wine_slug": "chateau-cheval-blanc-saint-emilion-grand-cru-premier-grand-cru-classe",
+            "images": {
+                "bottle": "https://vinovoss.com/images/bottles/a5ee6da87e1248d0975fe7e9cd3c060f.webp",
+                "bottle_mobile": "https://vinovoss.com/images/bottles/a5ee6da87e1248d0975fe7e9cd3c060f_mobile.webp"
+            },
+            "is_natural": false
+        },
+        "data_type": "vintage"
+    },
+    {
+        "data": {
+            "id": "2c3441175",
+            "slug": "la-rioja-alta-rioja-gran-reserva-904-2015",
+            "vintage_year": 2015,
+            "title": "La Rioja Alta Rioja Gran Reserva 904",
+            "image": "https://vinovoss.com/images/bottles/701e6a69d2084bbeaf59f7696db41941.webp",
+            "user_rating": 4.4,
+            "user_rating_count": 1334,
+            "labels": [
+                "Award Winning"
+            ],
+            "region_id": "238113084",
+            "region_slug": "rioja-spain",
+            "region": "Rioja",
+            "country": "Spain",
+            "price": null,
+            "bottle_volume": null,
+            "link_to_shop": null,
+            "shopping_prices": [
+                {
+                    "variant_id": "variant_01JS1S8MEHDPG14WMBF6G9Q2A0",
+                    "price_amount": 103.99,
+                    "vintage_id": "2c3441175",
+                    "wine_id": 614009,
+                    "vendor_id": "store_01JRANHYFE5SD1JDBDA3E3XX6P",
+                    "vendor_name": "Merchant X"
+                }
+            ],
+            "discriminator": "CompactVintage",
+            "wine_slug": "la-rioja-alta-rioja-gran-reserva-904",
+            "images": {
+                "bottle": "https://vinovoss.com/images/bottles/701e6a69d2084bbeaf59f7696db41941.webp",
+                "bottle_mobile": "https://vinovoss.com/images/bottles/701e6a69d2084bbeaf59f7696db41941_mobile.webp"
+            },
+            "is_natural": false
+        },
+        "data_type": "vintage"
+    },
+    {
+        "data": {
+            "id": "af1236441",
+            "slug": "masi-costasera-amarone-della-valpolicella-classico-2019",
+            "vintage_year": 2019,
+            "title": "Masi Costasera Amarone della Valpolicella Classico",
+            "image": "https://vinovoss.com/images/bottles/ae02d09772d54027ba15517e065485b2.webp",
+            "user_rating": 4.3,
+            "user_rating_count": 1730,
+            "labels": [],
+            "region_id": "8c8113210",
+            "region_slug": "veneto-italy",
+            "region": "Veneto",
+            "country": "Italy",
+            "price": null,
+            "bottle_volume": null,
+            "link_to_shop": null,
+            "shopping_prices": [
+                {
+                    "variant_id": "variant_01JS1SHP9QV3SZ7NF4DH6SSQ5Y",
+                    "price_amount": 71.99,
+                    "vintage_id": "af1236441",
+                    "wine_id": 615745,
+                    "vendor_id": "store_01JRANHYFE5SD1JDBDA3E3XX6P",
+                    "vendor_name": "Merchant X"
+                }
+            ],
+            "discriminator": "CompactVintage",
+            "wine_slug": "masi-costasera-amarone-della-valpolicella-classico",
+            "images": {
+                "bottle": "https://vinovoss.com/images/bottles/ae02d09772d54027ba15517e065485b2.webp",
+                "bottle_mobile": "https://vinovoss.com/images/bottles/ae02d09772d54027ba15517e065485b2_mobile.webp"
+            },
+            "is_natural": false
+        },
+        "data_type": "vintage"
+    },
+    {
+        "data": {
+            "id": "bb835779",
+            "slug": "alion-ribera-del-duero-2018",
+            "vintage_year": 2018,
+            "title": "Ali\u00f3n Ribera del Duero",
+            "image": "https://vinovoss.com/images/bottles/22393c1192364561afcc8ba6f3539c12.webp",
+            "user_rating": 4.4,
+            "user_rating_count": 1020,
+            "labels": [],
+            "region_id": "a38113168",
+            "region_slug": "castilla-y-leon-spain",
+            "region": "Castilla y Le\u00f3n",
+            "country": "Spain",
+            "price": null,
+            "bottle_volume": null,
+            "link_to_shop": null,
+            "shopping_prices": [
+                {
+                    "variant_id": "variant_01JTR2KSPBCD5CZK3AW4B6S7S6",
+                    "price_amount": 966.99,
+                    "vintage_id": "bb835779",
+                    "wine_id": 616987,
+                    "vendor_id": "store_01JRANHYFE5SD1JDBDA3E3XX6P",
+                    "vendor_name": "Merchant X"
+                }
+            ],
+            "discriminator": "CompactVintage",
+            "wine_slug": "alion-ribera-del-duero",
+            "images": {
+                "bottle": "https://vinovoss.com/images/bottles/22393c1192364561afcc8ba6f3539c12.webp",
+                "bottle_mobile": "https://vinovoss.com/images/bottles/22393c1192364561afcc8ba6f3539c12_mobile.webp"
+            },
+            "is_natural": false
+        },
+        "data_type": "vintage"
+    },
+    {
+        "data": {
+            "id": "f08172365",
+            "slug": "dominus-dominus-christian-moueix-2021",
+            "vintage_year": 2021,
+            "title": "Dominus Dominus (Christian Moueix)",
+            "image": "https://vinovoss.com/images/bottles/3583df35ef564ea19434a2525daae015.webp",
+            "user_rating": 4.5,
+            "user_rating_count": 802,
+            "labels": [
+                "Award Winning"
+            ],
+            "region_id": "818113023",
+            "region_slug": "napa-united-states",
+            "region": "Napa",
+            "country": "United States",
+            "price": null,
+            "bottle_volume": null,
+            "link_to_shop": null,
+            "shopping_prices": [
+                {
+                    "variant_id": "variant_01JRAY5R6T4P299BPY10FFSB4X",
+                    "price_amount": 399.99,
+                    "vintage_id": "f08172365",
+                    "wine_id": 614343,
+                    "vendor_id": "store_01JRANHYFE5SD1JDBDA3E3XX6P",
+                    "vendor_name": "Merchant X"
+                }
+            ],
+            "discriminator": "CompactVintage",
+            "wine_slug": "dominus-dominus-christian-moueix",
+            "images": {
+                "bottle": "https://vinovoss.com/images/bottles/3583df35ef564ea19434a2525daae015.webp",
+                "bottle_mobile": "https://vinovoss.com/images/bottles/3583df35ef564ea19434a2525daae015_mobile.webp"
+            },
+            "is_natural": false
+        },
+        "data_type": "vintage"
+    }
+]
