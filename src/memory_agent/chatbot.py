@@ -7,7 +7,9 @@ from typing import List, TypedDict
 from langchain_core.messages import BaseMessage
 import streamlit as st
 import logging
-from config import config
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 class AgentStateWithWines(TypedDict):
     messages: List[BaseMessage]
@@ -16,7 +18,7 @@ class AgentStateWithWines(TypedDict):
     remaining_steps: RemainingSteps
 
 # Get API key from Streamlit secrets
-api_key = config.get('ai', 'gemini_api_key')
+api_key = os.getenv('GEMINI_API_KEY')
 if not api_key:
     raise ValueError("Gemini API key not found in configuration")
 
@@ -25,7 +27,7 @@ tools = [wine_search, sort_wines]
 
 try:
     model = init_chat_model(
-        model="gemini-2.0-flash-lite",
+        model="gemini-2.5-flash-preview-05-20",
         model_provider="google_genai",
         api_key=api_key,
         credentials=None  # Explicitly set to None to force API key auth
