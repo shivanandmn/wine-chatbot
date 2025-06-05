@@ -10,6 +10,7 @@ import logging
 import os
 from dotenv import load_dotenv
 load_dotenv()
+from settings import get_settings
 
 class AgentStateWithWines(TypedDict):
     messages: List[BaseMessage]
@@ -18,7 +19,8 @@ class AgentStateWithWines(TypedDict):
     remaining_steps: RemainingSteps
 
 # Get API key from Streamlit secrets
-api_key = os.getenv('GEMINI_API_KEY')
+settings = get_settings()
+api_key = settings.gemini_api_key
 if not api_key:
     raise ValueError("Gemini API key not found in configuration")
 
