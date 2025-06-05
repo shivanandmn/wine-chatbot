@@ -48,6 +48,7 @@ class Config:
 
     def get(self, section: str, key: str = None) -> Any:
         """Get a configuration value."""
+        print(self._config)
         if key is None:
             return self._config.get(section, {})
         return self._config.get(section, {}).get(key)
