@@ -7,7 +7,7 @@ from config import config
 st_config = get_streamlit_config()
 st.set_page_config(**st_config)
 import os
-os.environ["GEMINI_API_KEY"] = config.get("ai", {}).get("gemini_api_key")
+os.environ["GEMINI_API_KEY"] = config.get("ai", "GEMINI_API_KEY")
 
 
 from memory_agent.chatbot import agent
