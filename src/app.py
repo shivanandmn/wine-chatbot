@@ -1,10 +1,11 @@
 import streamlit as st
 from langchain_core.messages import HumanMessage, AIMessage
 from config import get_streamlit_config
+from config import config
 
 # Apply Streamlit configurations
-config = get_streamlit_config()
-st.set_page_config(**config)
+st_config = get_streamlit_config()
+st.set_page_config(**st_config)
 import os
 os.environ["GEMINI_API_KEY"] = config.get("ai", {}).get("gemini_api_key")
 
