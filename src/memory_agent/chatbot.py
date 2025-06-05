@@ -10,7 +10,7 @@ import logging
 import os
 from dotenv import load_dotenv
 load_dotenv()
-from settings import get_settings
+from memory_agent.settings import get_settings
 
 class AgentStateWithWines(TypedDict):
     messages: List[BaseMessage]
