@@ -5,7 +5,12 @@ from config import get_streamlit_config
 # Apply Streamlit configurations
 config = get_streamlit_config()
 st.set_page_config(**config)
+import os
+os.environ["GEMINI_API_KEY"] = config.get("ai", {}).get("gemini_api_key")
+
+
 from memory_agent.chatbot import agent
+
 
 def init_session_state():
     if "messages" not in st.session_state:
